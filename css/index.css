@@ -1,1 +1,493 @@
-@import url(//fonts.googleapis.com/css?family=Abel);html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,b,u,i,center,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td,article,aside,canvas,details,embed,figure,figcaption,footer,header,hgroup,menu,nav,output,ruby,section,summary,time,mark,audio,video{margin:0;padding:0;border:0;font:inherit;font-size:100%;vertical-align:baseline}html{line-height:1}ol,ul{list-style:none}table{border-collapse:collapse;border-spacing:0}caption,th,td{text-align:left;font-weight:normal;vertical-align:middle}q,blockquote{quotes:none}q:before,q:after,blockquote:before,blockquote:after{content:"";content:none}a img{border:none}article,aside,details,figcaption,figure,footer,header,hgroup,main,menu,nav,section,summary{display:block}body{width:1024px;margin:0 auto}body #hedder_content{width:100%;height:210px;background:url("../images/topimage.jpg");overflow:hidden;*zoom:1}body #hedder_content #hedder_contentbox{width:100%;height:50px;padding-top:50px}body #hedder_content #hedder_contentbox .header_logo{width:35%;height:50px;padding:50px 0 0 15px;float:left}body #hedder_content #hedder_contentbox h1{font-size:200%}body #hedder_content #hedder_contentbox .header_rightbox{width:60%;height:35px;padding:65px 0 0 0;float:right}body #hedder_content #hedder_contentbox .header_rightbox .header_sns{width:10%;height:50px;float:right}body #hedder_content #hedder_contentbox .header_rightbox .sns_image{margin-bottom:0 10px 0 0}body #hedder_content #hedder_contentbox .header_rightbox .fa{font-size:30px;padding:0 0 0 20px;font-family:FontAwesome}body #hedder_content #hedder_contentbox .header_rightbox .search_box{width:40%;padding:0 15px 0 0;float:right}body #hedder_content #hedder_contentbox .header_rightbox #SEARCH_ENGINE{margin-bottom:5px;background:#fff;border:2px solid #363636;background:#FFED71;box-sizing:border-box}body #hedder_content #hedder_contentbox .header_rightbox #SEARCH_ENGINE{padding:0}body #hedder_content #hedder_contentbox .header_rightbox input[type="search"]{margin:auto;padding:3px 15% 3px 3%;width:82%;height:24px;border:none;background-color:rgba(238,238,238,0.5);font-size:1.1rem;position:relative;z-index:0;-webkit-appearance:textfield;-moz-box-sizing:content-box;-webkit-box-sizing:content-box;box-sizing:content-box}body #hedder_content #hedder_contentbox .header_rightbox input[type="image"]{float:right;margin:-24px 5px 0 0;position:relative;z-index:100;height:18px}body #hedder_content .Global_Navigation_Bar{width:100%;height:60px;display:block;float:left}body #hedder_content .Global_Navigation_Bar .navi{box-sizing:border-box;margin:0 11px 0 11px;width:100%;display:block;box-sizing:border-box}body #hedder_content .Global_Navigation_Bar li{display:inline-block;background-color:#4682b4;outline:solid 2px #0000ff;width:120px;padding:10px;margin:13px;text-align:center;float:left}body #hedder_content .Global_Navigation_Bar a{color:#ffffff;text-decoration:none}body main{background-color:#ff530d;width:100%;display:block;overflow:hidden;*zoom:1}body main .Eye_catch_area{background-color:#b0c4de;width:90%;height:150px;display:block;margin:0 auto}body main .content_area{background-color:#b0e0e6;width:90%;display:block;margin:0 auto}body main .content_area .pc_mainbox{background-color:#d2691e;width:33.33333%;height:150px;display:block;float:left}body footer{clear:both;background-color:#34cbff;width:100%;height:350px;overflow:hidden;*zoom:1}body footer .left_footer{background-color:#b8860b;width:60%;height:300px;float:left}body footer .right_footer{background-color:#5f9ea0;width:40%;height:300px;float:right}body footer .copyright{background-color:#7b68ee;width:100%;height:50px;float:right}@media screen and (max-width: 480px){body{width:100%}body header{height:100px;overflow:hidden;*zoom:1}body header #hedder_contentbox .header_logo{width:100%;height:50px}body header #hedder_contentbox .header_sns{width:20%;height:50px}body header #hedder_contentbox .header_sns .search_box{width:60%;height:50px}body main{overflow:hidden;*zoom:1}body main .content_area .sp_mainbox{width:100%}body footer{overflow:hidden;*zoom:1}body footer .left_footer{width:100%;height:150px}body footer .right_footer{width:100%;height:150px}body footer .copyright{width:100%;height:50px}}
+@charset "UTF-8";
+/*--------------------------------------------------------------------------------------------------------------
+エンコーディング定義
+--------------------------------------------------------------------------------------------------------------*/
+/*--------------------------------------------------------------------------------------------------------------
+システム共通定義インクルード
+--------------------------------------------------------------------------------------------------------------*/
+/* コンパスの基本機能を全部インポート */
+/* リセット用CSSをインポート */
+@import url(//fonts.googleapis.com/css?family=Abel);
+@import url(OwlCarousel/assets/owl.carousel.min.css);
+@import url(OwlCarousel/assets/owl.theme.default.min.css);
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font: inherit;
+  font-size: 100%;
+  vertical-align: baseline; }
+
+html {
+  line-height: 1; }
+
+ol, ul {
+  list-style: none; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+caption, th, td {
+  text-align: left;
+  font-weight: normal;
+  vertical-align: middle; }
+
+q, blockquote {
+  quotes: none; }
+  q:before, q:after, blockquote:before, blockquote:after {
+    content: "";
+    content: none; }
+
+a img {
+  border: none; }
+
+article, aside, details, figcaption, figure, footer, header, hgroup, main, menu, nav, section, summary {
+  display: block; }
+
+/* 汎用定数 */
+/**********************************************************************************************************************************
+汎用定数定義SASS
+	汎用的に使用される定数を定義したSASS
+
+	注意事項：
+		ここで定義されるものは削除してはいけない。
+		本SASSは最初にインポートされる必要がある。
+		ここで定義されている定数をオーバーライドすることで挙動を変更できる。
+
+	作成履歴：
+		2016/07/05	新規作成（浅野 利博）
+**********************************************************************************************************************************/
+/*--------------------------------------------------------------------------------------------------------------
+エンコーディング定義
+--------------------------------------------------------------------------------------------------------------*/
+/*--------------------------------------------------------------------------------------------------------------
+定数定義
+--------------------------------------------------------------------------------------------------------------*/
+/*----------------------------------------------------------------------------------------------------------
+メディア定義
+----------------------------------------------------------------------------------------------------------*/
+/*----------------------------------------------------------------------------------------------------------
+フォント定義
+----------------------------------------------------------------------------------------------------------*/
+/* 汎用関数 */
+/**********************************************************************************************************************************
+汎用定数定義SASS
+	汎用的に使用される定数を定義したSASS
+
+	作成履歴：
+		2017/02/09	新規作成（浅野 利博）
+**********************************************************************************************************************************/
+/*--------------------------------------------------------------------------------------------------------------
+エンコーディング定義
+--------------------------------------------------------------------------------------------------------------*/
+/*----------------------------------------------------------------------------------------------------------
+Calc代用関数
+	説明：
+		Compassにはclac相当のファンクションが機能しない。
+		そのための代用となる。
+----------------------------------------------------------------------------------------------------------*/
+/* Google Font をインポート（必要に応じて）*/
+/* カルーセルスライダー*/
+/*--------------------------------------------------------------------------------------------------------------
+全適用定義
+	プリンターを含む全てで適用される定義を記述。
+--------------------------------------------------------------------------------------------------------------*/
+/*----------------------------------------------------------------------------------------------------------
+	変数定義
+	----------------------------------------------------------------------------------------------------------*/
+/*--------------------------------------------------------------------------------------------------------------
+boxレイアウト確認用
+--------------------------------------------------------------------------------------------------------------*/
+/*----------------------------------------------------------------------------------------------------------
+ワイヤーフレーム関連定義
+----------------------------------------------------------------------------------------------------------*/
+body {
+  width: 1024px;
+  margin: 0 auto;
+  background: #fffbf4; }
+  body #hedder_content {
+    width: 100%;
+    height: 210px;
+    background: url("../images/topimage.jpg");
+    overflow: hidden;
+    *zoom: 1; }
+    body #hedder_content #hedder_contentbox {
+      width: 100%;
+      height: 50px;
+      padding-top: 50px; }
+      body #hedder_content #hedder_contentbox .header_logo {
+        width: 35%;
+        height: 50px;
+        padding: 50px 0 0 15px;
+        float: left; }
+      body #hedder_content #hedder_contentbox h1 {
+        font-size: 200%;
+        font-weight: bold; }
+      body #hedder_content #hedder_contentbox .header_rightbox {
+        width: 60%;
+        height: 35px;
+        padding: 65px 0 0 0;
+        float: right;
+        /* SUB BOXに関する設定 */
+        /* 検索エンジン部分 */ }
+        body #hedder_content #hedder_contentbox .header_rightbox .header_sns {
+          width: 10%;
+          height: 50px;
+          float: right; }
+        body #hedder_content #hedder_contentbox .header_rightbox .sns_image {
+          margin-bottom: 0 10px 0 0; }
+        body #hedder_content #hedder_contentbox .header_rightbox .fa {
+          font-size: 30px;
+          padding: 0 0 0 20px;
+          font-family: FontAwesome; }
+        body #hedder_content #hedder_contentbox .header_rightbox .search_box {
+          width: 40%;
+          padding: 0 15px 0 0;
+          float: right; }
+        body #hedder_content #hedder_contentbox .header_rightbox .SEARCH_ENGINE {
+          margin-bottom: 5px;
+          background: #fff;
+          border: 2px solid #363636;
+          background: #FFED71;
+          box-sizing: border-box; }
+        body #hedder_content #hedder_contentbox .header_rightbox .SEARCH_ENGINE {
+          padding: 0; }
+        body #hedder_content #hedder_contentbox .header_rightbox input[type="search"] {
+          margin: auto;
+          padding: 3px 15% 3px 3%;
+          width: 82%;
+          height: 24px;
+          border: none;
+          background-color: rgba(238, 238, 238, 0.5);
+          font-size: 1.1rem;
+          position: relative;
+          /* 入力部分の上に検索ボタンを置くためのおまじない */
+          z-index: 0;
+          /* 入力部分の上に検索ボタンを置くためのおまじない：重ね順を定義 */
+          -webkit-appearance: textfield;
+          -moz-box-sizing: content-box;
+          -webkit-box-sizing: content-box;
+          box-sizing: content-box; }
+        body #hedder_content #hedder_contentbox .header_rightbox input[type="image"] {
+          float: right;
+          margin: -24px 5px 0 0;
+          position: relative;
+          /* 入力部分の上に検索ボタンを置くためのおまじない */
+          z-index: 100;
+          /* 入力部分の上に検索ボタンを置くためのおまじない：重ね順を定義 */
+          height: 18px; }
+    body #hedder_content .Global_Navigation_Bar {
+      width: 100%;
+      height: 60px;
+      display: block;
+      float: left; }
+      body #hedder_content .Global_Navigation_Bar .navi {
+        box-sizing: border-box;
+        margin: 0 11px 0 11px;
+        width: 100%;
+        display: block;
+        box-sizing: border-box; }
+      body #hedder_content .Global_Navigation_Bar li {
+        display: inline-block;
+        background-color: #4682b4;
+        width: 120px;
+        padding: 10px;
+        margin: 13px;
+        text-align: center;
+        float: left; }
+      body #hedder_content .Global_Navigation_Bar a {
+        color: #ffffff;
+        text-decoration: none;
+        padding: 2px; }
+  body main {
+    width: 100%;
+    display: block;
+    overflow: hidden;
+    *zoom: 1; }
+    body main #Eye_catch_area {
+      width: 100%;
+      height: 150px;
+      padding: 10px 0 10px 0;
+      overflow: hidden;
+      *zoom: 1; }
+      body main #Eye_catch_area #CAROUSEL_SLIDER {
+        list-style: none; }
+      body main #Eye_catch_area .owl-controls {
+        display: none; }
+    body main .content_area {
+      width: 90%;
+      display: block;
+      margin: 0 auto; }
+      body main .content_area .pc_mainbox {
+        width: 33.33333%;
+        height: 300px;
+        display: block;
+        float: left; }
+    body main .sp_content {
+      display: none; }
+    body main #newstitle_area {
+      width: 100%;
+      height: 30px;
+      background: #ffcc00; }
+      body main #newstitle_area h2 {
+        color: #000000;
+        text-align: center;
+        font-weight: bold;
+        padding: 7px 0 0 0; }
+    body main #news_area {
+      height: 130px;
+      width: 100%;
+      padding: 10px 0 0 0; }
+      body main #news_area .newsimage {
+        height: 100px;
+        width: 150px;
+        padding: 0 0 0 10px;
+        float: left; }
+      body main #news_area .news {
+        height: 130px;
+        width: -moz-calc(100% -  ＋ 150px);
+        width: -o-calc(100% -  ＋ 150px);
+        width: -webkit-calc(100% -  ＋ 150px);
+        width: calc(100% -  ＋ 150px);
+        padding: 0 10px 0 0;
+        overflow: hidden;
+        *zoom: 1; }
+      body main #news_area .newstitle_area {
+        height: 20px;
+        width: -moz-calc(100% -  ＋ 150px);
+        width: -o-calc(100% -  ＋ 150px);
+        width: -webkit-calc(100% -  ＋ 150px);
+        width: calc(100% -  ＋ 150px);
+        padding: 0 0 0 10px;
+        background: #ffcc00; }
+      body main #news_area .newstxt {
+        height: 110px;
+        width: -moz-calc(100% -  ＋ 150px);
+        width: -o-calc(100% -  ＋ 150px);
+        width: -webkit-calc(100% -  ＋ 150px);
+        width: calc(100% -  ＋ 150px);
+        padding: 0 0 0 10px; }
+  body footer {
+    clear: both;
+    background-color: #124b95;
+    width: 100%;
+    height: 200px;
+    overflow: hidden;
+    *zoom: 1; }
+    body footer a {
+      color: #ffffff;
+      text-decoration: none; }
+    body footer #footerbox {
+      width: 100%; }
+      body footer #footerbox .left_footer1 {
+        width: 30%;
+        height: 120px;
+        padding: 10px;
+        float: left; }
+      body footer #footerbox .left_footer2 {
+        width: 30%;
+        height: 120px;
+        padding: 10px;
+        float: left; }
+      body footer #footerbox .right_footer {
+        width: 30%;
+        height: 120px;
+        padding: 10px;
+        float: right; }
+    body footer .copyright {
+      width: 100%;
+      height: 50px;
+      padding: 20px;
+      text-align: center;
+      float: left; }
+      body footer .copyright a {
+        color: #ffffff;
+        text-decoration: none; }
+
+/*----------------------------------------------------------------------------------------------------------
+その他の定義
+----------------------------------------------------------------------------------------------------------*/
+/*----------------------------------------------------------------------------------------------------------
+Ratina専用定義
+	画像や特殊文字を実装する場合にRatina用の設定を行う。
+----------------------------------------------------------------------------------------------------------*/
+/*--------------------------------------------------------------------------------------------------------------
+スマートフォン専用定義
+	注意事項：
+		プリンター等のディスプレイ以外には適用されない。
+--------------------------------------------------------------------------------------------------------------*/
+@media screen and (max-width: 480px) {
+  /*----------------------------------------------------------------------------------------------------------
+  変数定義
+  ----------------------------------------------------------------------------------------------------------*/
+  /*----------------------------------------------------------------------------------------------------------
+  ワイヤーフレーム関連定義
+  ----------------------------------------------------------------------------------------------------------*/
+  body {
+    width: 100%;
+    background: #fffbf4; }
+    body #hedder_content {
+      height: 210px;
+      background: url("../images/topimage.jpg");
+      overflow: hidden;
+      *zoom: 1; }
+      body #hedder_content #hedder_contentbox .header_logo {
+        width: 100%;
+        height: 50px;
+        padding: 55px 0 0 15px; }
+        body #hedder_content #hedder_contentbox .header_logo h1 {
+          font-size: 200%;
+          font-weight: bold; }
+      body #hedder_content #hedder_contentbox .header_rightbox {
+        width: 100%;
+        height: 75px;
+        float: inherit; }
+        body #hedder_content #hedder_contentbox .header_rightbox .search_box {
+          width: 40%; }
+        body #hedder_content #hedder_contentbox .header_rightbox .header_sns {
+          float: right; }
+          body #hedder_content #hedder_contentbox .header_rightbox .header_sns .fa {
+            padding: 0 0 0 0px;
+            font-size: 30px;
+            font-family: FontAwesome; }
+      body #hedder_content .Global_Navigation_Bar {
+        display: none; }
+    body main {
+      width: 100%;
+      overflow: hidden;
+      *zoom: 1; }
+      body main #Eye_catch_area {
+        height: inherit; }
+      body main .content_area {
+        display: none; }
+      body main .sp_content_area {
+        display: block; }
+        body main .sp_content_area .sp_content {
+          display: block;
+          width: 100%; }
+          body main .sp_content_area .sp_content img {
+            width: 100%; }
+    body footer {
+      background-color: #124b95;
+      width: 100%;
+      height: 470px;
+      overflow: hidden;
+      *zoom: 1; }
+      body footer a {
+        color: #ffffff;
+        text-decoration: none; }
+      body footer #footerbox {
+        width: 100%; }
+        body footer #footerbox .left_footer1 {
+          height: 150px;
+          width: 150%;
+          padding: 10px;
+          float: left; }
+          body footer #footerbox .left_footer1 a {
+            line-height: 15pt; }
+        body footer #footerbox .left_footer2 {
+          width: 100%;
+          height: 150px;
+          padding: 10px;
+          float: left; }
+          body footer #footerbox .left_footer2 a {
+            line-height: 15pt; }
+        body footer #footerbox .right_footer {
+          height: 80px;
+          width: 100%;
+          padding: 10px;
+          float: left; }
+          body footer #footerbox .right_footer a {
+            line-height: 15pt; }
+      body footer .copyright {
+        padding: 0px;
+        text-align: center; }
+
+  /*----------------------------------------------------------------------------------------------------------
+  その他の定義
+  ----------------------------------------------------------------------------------------------------------*/
+  /*----------------------------------------------------------------------------------------------------------
+  Ratina専用定義
+  	画像や特殊文字を実装する場合にRatina用の設定を行う。
+  ----------------------------------------------------------------------------------------------------------*/ }
+/*--------------------------------------------------------------------------------------------------------------
+ファブレット専用定義
+	注意事項：
+		プリンター等のディスプレイ以外には適用されない。
+--------------------------------------------------------------------------------------------------------------*/
+@media screen and (min-width: 481px) and (max-width: 550px) {
+  /*----------------------------------------------------------------------------------------------------------
+  ワイヤーフレーム関連定義
+  ----------------------------------------------------------------------------------------------------------*/
+  /*----------------------------------------------------------------------------------------------------------
+  その他の定義
+  ----------------------------------------------------------------------------------------------------------*/
+  /*----------------------------------------------------------------------------------------------------------
+  Ratina専用定義
+  	画像や特殊文字を実装する場合にRatina用の設定を行う。
+  ----------------------------------------------------------------------------------------------------------*/ }
+/*--------------------------------------------------------------------------------------------------------------
+タブレット専用定義
+	注意事項：
+		プリンター等のディスプレイ以外には適用されない。
+--------------------------------------------------------------------------------------------------------------*/
+@media screen and (min-width: 551px) and (max-width: 768px) {
+  /*----------------------------------------------------------------------------------------------------------
+  ワイヤーフレーム関連定義
+  ----------------------------------------------------------------------------------------------------------*/
+  /*----------------------------------------------------------------------------------------------------------
+  その他の定義
+  ----------------------------------------------------------------------------------------------------------*/
+  /*----------------------------------------------------------------------------------------------------------
+  Ratina専用定義
+  	画像や特殊文字を実装する場合にRatina用の設定を行う。
+  ----------------------------------------------------------------------------------------------------------*/ }
+/*--------------------------------------------------------------------------------------------------------------
+デスクトップ専用定義
+	注意事項：
+		通常デスクトップのディスプレイの場合をデスクトップとして解釈している。
+		プリンター等のディスプレイ以外には適用されない。
+--------------------------------------------------------------------------------------------------------------*/
+@media screen and (min-width: 769px) and (max-width: 1200px) {
+  /*----------------------------------------------------------------------------------------------------------
+  ワイヤーフレーム関連定義
+  ----------------------------------------------------------------------------------------------------------*/
+  /*----------------------------------------------------------------------------------------------------------
+  その他の定義
+  ----------------------------------------------------------------------------------------------------------*/
+  /*----------------------------------------------------------------------------------------------------------
+  Ratina専用定義
+  	画像や特殊文字を実装する場合にRatina用の設定を行う。
+  ----------------------------------------------------------------------------------------------------------*/ }
+/*--------------------------------------------------------------------------------------------------------------
+デスクトップHD以上定義
+	注意事項：
+		デスクトップHD以上のディスプレイの場合をデスクトップとして解釈している。
+		プリンター等のディスプレイ以外には適用されない。
+--------------------------------------------------------------------------------------------------------------*/
+@media screen and (min-width: 1201px) {
+  /*----------------------------------------------------------------------------------------------------------
+  ワイヤーフレーム関連定義
+  ----------------------------------------------------------------------------------------------------------*/
+  /*----------------------------------------------------------------------------------------------------------
+  その他の定義
+  ----------------------------------------------------------------------------------------------------------*/
+  /*----------------------------------------------------------------------------------------------------------
+  Ratina専用定義
+  	画像や特殊文字を実装する場合にRatina用の設定を行う。
+  ----------------------------------------------------------------------------------------------------------*/ }
+
+/*# sourceMappingURL=index.css.map */

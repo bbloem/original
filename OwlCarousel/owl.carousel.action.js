@@ -1,8 +1,9 @@
 $(document).ready(function(){
   $('.owl-carousel').owlCarousel({
       loop:true,
-      nav:false,
+      nav:true,
       items:1,
-      autoplay:true
+      autoplay:true,
+      dots: false
   })
 });
