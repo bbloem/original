@@ -24,11 +24,11 @@
 @import url(OwlCarousel/assets/owl.theme.default.min.css);
 
 //mixin
-@mixin calc($property, $expression) { 
-  #{$property}: -moz-calc(#{$expression}); 
-  #{$property}: -o-calc(#{$expression}); 
-  #{$property}: -webkit-calc(#{$expression}); 
-  #{$property}: calc(#{$expression}); 
+@mixin calc($property, $expression) {
+  #{$property}: -moz-calc(#{$expression});
+  #{$property}: -o-calc(#{$expression});
+  #{$property}: -webkit-calc(#{$expression});
+  #{$property}: calc(#{$expression});
 }
 
 
@@ -41,7 +41,7 @@
 	----------------------------------------------------------------------------------------------------------*/
 
 	$pc_mainbox:              33%;
-	
+
 // 最大ページ幅
 	$page_max_width:			1024px;
 	// Header高さ（固定）
@@ -52,7 +52,7 @@
 	$main_contents_margin:		40px;
 	// Footer高さ（固定）
 	$footer_height: 			80px;
-	
+
 	$footer_width:				30%;
 
 	// Header ロゴ幅
@@ -62,7 +62,7 @@
 
 	// 右側フレーム幅
 	$sRigth_Frame_width:		300px;
-	
+
 	// アイ・キャッチ・エリア高
 	$sEye_catch_area_height:	150px;
 
@@ -85,9 +85,9 @@ boxレイアウト確認用
 		background:#fffbf4;
 
 		// ヘッダー部
-		#hedder_content 
+		#hedder_content
 		{
-			
+
 			width: 100%;
 			height: 210px;
 			background:url("../images/topimage.jpg") ;
@@ -107,7 +107,7 @@ boxレイアウト確認用
 					padding: 50px 0 0 15px;
 					float: left;
 				}
-				
+
 				h1
 				{
 					font-size: 200%;
@@ -120,14 +120,14 @@ boxレイアウト確認用
 					height: 35px;
 					padding: 65px 0 0 0;
 					float: right;
-				
+
 					// 右側メニュー定義
 					.header_sns
 					{
-					
+
 					width:  10%;
 					height: 50px;
-					
+
 					float: right;
 					}
 					// facebook定義
@@ -137,17 +137,17 @@ boxレイアウト確認用
 					}
 					.fa
 					{
-					font-size: 30px; 
+					font-size: 30px;
 					padding: 0 0 0 20px;
-  					font-family: FontAwesome;
+					font-family: FontAwesome;
 					}
 
 					//検索ボックス
 					.search_box
 					{
-						
-						width:  40%;
-						
+
+						width:  30%;
+	
 						padding: 0 15px 0 0;
 						float: right;
 					}
@@ -155,10 +155,12 @@ boxレイアウト確認用
 					.SEARCH_ENGINE
 					{
 						margin-bottom:5px;
-						background:#fff;
-						border:2px solid #363636;
-						background:#FFED71;
+						background:rgba (#fff,0.6);
+	
+
 						box-sizing:border-box;
+						opacity: 0.6;
+						border:2px solid #363636;
 					}
 
 					/* 検索エンジン部分 */
@@ -181,8 +183,9 @@ boxレイアウト確認用
 							-moz-box-sizing: content-box;
 							-webkit-box-sizing: content-box;
 							box-sizing: content-box;
+
 						}
-						
+
 						input[type="image"]
 						{
 							float:right;
@@ -191,41 +194,41 @@ boxレイアウト確認用
 							z-index:100; /* 入力部分の上に検索ボタンを置くためのおまじない：重ね順を定義 */
 							height:18px;
 						}
-				}	
+				}
 			}
 			
 			
 			
 			.Global_Navigation_Bar
 			{
-				
+
 				width:  100%;
 				height: 60px;
 				display: block;
 				float: left;
 
 				.navi{
-	
+
    					box-sizing:border-box;
    					margin: 0 11px 0 11px;
    					width: 100%;
    					display: block;
    					box-sizing: border-box
-   					
+	
 				}
-				
+
 				li
 				{
 					display: inline-block;
 					background-color: #4682b4;
-					
+	
 					width: 120px;
 					padding: 10px;
 					margin: 13px;
 					text-align: center;
 					float: left;
 				}
-				
+
 				a
 				{
 					color: #ffffff;
@@ -243,9 +246,10 @@ boxレイアウト確認用
 		// コンテンツ部
 		main
 		{
-			
+
 			width: 100%;
 			display: block;
+	
 
 			// 広告スペース定義
 			#Eye_catch_area
@@ -253,25 +257,32 @@ boxレイアウト確認用
 				width:  100%;
 				height: 150px;
 				padding: 10px 0 10px 0;
-				
+
+	
 				#CAROUSEL_SLIDER
 				{
+
 					list-style: none;
-					
+
+					img
+					{
+						@include border-radius( 30px );
+					}
 				}
 
-				.owl-controls 
+				.owl-controls
 				{
 					display: none;
+	
 				}
-				
+	
 			@include clearfix;
 			}
 
 			// content_area定義
 			.content_area
 			{
-				
+
 				width:  90%;
 				display: block;
 				margin: 0 auto;
@@ -279,10 +290,10 @@ boxレイアウト確認用
 				// pc_各部定義
 				.pc_mainbox
 				{
-				
+
 					width:  ( 100% / 3 );
 					height: 300px;
-				
+
 					display: block;
 					float: left;
 				}
@@ -293,8 +304,24 @@ boxレイアウト確認用
 
 				display: none;
 			}
-			
+
 			// ニュース定義
+			#page_title
+			{
+				width:  100%;
+				height: 50px;
+				background: #ffcc00;
+
+				h1
+				{
+					color: #000000;
+					font-size: 200%;
+					text-align: center;
+					font-weight: bold;
+					padding: 10px 0 0 0;
+				}
+
+			}
 			#newstitle_area
 			{
 				width:  100%;
@@ -304,17 +331,21 @@ boxレイアウト確認用
 				h2
 				{
 					color: #000000;
-					text-align: center;
+					font-size: 140%;
+					text-align: left;
 					font-weight: bold;
-					padding: 7px 0 0 0;
+					padding: 0 0 0 30px;
+
 				}
-			}	
+			}
+
 			#news_area
 			{
-				height: 130px;
+				height: 100%;
 				width: 100%;
 				padding: 10px 0 0 0;
-					
+				float: left;
+
 				.newsimage
 				{
 					height: 100px;
@@ -324,63 +355,75 @@ boxレイアウト確認用
 				}
 					.news
 					{
-						height: 130px;
+						height: 100%;
 						@include calc( width, "100% - " ＋ $newsimage_width );
 						padding:0 10px 0 0;
 						@include clearfix;
 					}
-						.newstitle_area
+						.newstitle
 						{
 							height: 20px;
 							@include calc( width, "100% - " ＋ $newsimage_width );
 							padding: 0 0 0 10px;
 							background: #ffcc00;
+							h3,a
+							{
+								text-decoration: none;
+							}
 						}
 						.newstxt
 						{
-							height: 110px;
+							height: 100%;
 							@include calc( width, "100% - " ＋ $newsimage_width );
-							padding: 0 0 0 10px;
+							padding: 8px 0 0 10px;
+
+							a
+							{
+								line-height: 130%;
+							}
 						}
 			}
-			
+
 
 			@include clearfix;
 		}
-		
+
 		// フッター部
 		footer
 		{
 			clear: both;
 			background-color: #124b95;
 			width: 100%;
-			height: 200px;
-			
-			a
-					{
-						color: #ffffff;
-						text-decoration: none;
-					}
-		
+			height: 280px;
+
+
+
 			#footerbox
 			{
 				width: 100%;
-				
-						
+
+					a
+					{
+						color: #ffffff;
+						text-decoration: none;
+						line-height: 170%;
+					}
+
+
 				.left_footer1
 				{
-					
-					width:	$footer_width;	
-					height: 120px;
+
+					width:	$footer_width;
+					height: 210px;
 					padding: 10px;
 					float: left;
 				}
-				
+
 				.left_footer2
 				{
-					
-					width:	$footer_width;	
-					height: 120px;
+
+					width:	$footer_width;
+					height: 210px;
 					padding: 10px;
 					float: left;
 				}
@@ -388,24 +431,24 @@ boxレイアウト確認用
 				.right_footer
 				{
 					
-					width:	$footer_width;	
-					height: 120px;
+					width:	$footer_width;
+					height: 210px;
 					padding: 10px;
 					float: right;
 				}
-				
+
 			}
 			
-			
+
 			@include clearfix;
 				.copyright
 				{
 					width: 100%;
-					height: 50px;
+					height: 30px;
 					padding: 20px;
 					text-align: center;
 					float: left;
-					
+
 					a
 					{
 						color: #ffffff;
@@ -413,10 +456,10 @@ boxレイアウト確認用
 					}
 				}
 
-			
+	
 		}
 	}
-			
+
 
 	/*----------------------------------------------------------------------------------------------------------
 	その他の定義
@@ -455,8 +498,8 @@ boxレイアウト確認用
 	$sp_sMenu_Frame_width:		30%;
 
 	// アイ・キャッチ・エリア高
-	$sp_sEye_catch_area_height:	80px;	
-	
+	$sp_sEye_catch_area_height:	80px;
+
 
 
 	/*----------------------------------------------------------------------------------------------------------
@@ -469,7 +512,7 @@ boxレイアウト確認用
 		background:#fffbf4;
 
 		// ヘッダー部
-		#hedder_content 
+		#hedder_content
 		{
 			
 			height: 210px;
@@ -492,14 +535,14 @@ boxレイアウト確認用
 						font-weight: bold;
 					}
 				}
-				
+
 				// 右側メニューbox facebookとserchbox梱包定義
 				.header_rightbox
 				{
 					width: 100%;
 					height: 75px;
 					float: inherit;
-					
+
 
 					//検索ボックス
 					.search_box
@@ -513,18 +556,18 @@ boxレイアウト確認用
 
 						float: right;
 
-						
+
 						// facebook定義
 						.sns_image
 						{
-							
+	
 						}
-						
+	
 						.fa
 						{
 							padding: 0 0 0 0px;
 							font-size: 30px; 
-  							font-family: FontAwesome;
+							font-family: FontAwesome;
 						}
 
 					}	
@@ -543,7 +586,7 @@ boxレイアウト確認用
 		// コンテンツ部
 		main
 		{
-			
+
 			width: 100%;
 			//height: 300px;
 			//display: block;
@@ -552,7 +595,25 @@ boxレイアウト確認用
 			#Eye_catch_area
 			{
 				height: inherit;
+				
 			}
+
+				#CAROUSEL_SLIDER
+				{
+					list-style: none;
+					
+					img
+					{
+						@include border-radius( 5px );	
+					}
+
+				}
+				.owl-controls 
+				{
+					display: none;
+					
+				}
+
 
 			// content_area定義
 			.content_area
@@ -576,87 +637,84 @@ boxレイアウト確認用
 					
 					img
 					{
+						padding: 2px 0 2px 0;
 						width: 100%;
 					}
 				}
 			}
-
+			
 			@include clearfix;
 		}
-		
+
 		// フッター部
 		footer
 		{
-			
+	
 			background-color: #124b95;
 			width: 100%;
-			height: 470px;
-			
+			height: 100%;
+
 			a
 			{
 				color: #ffffff;
 				text-decoration: none;
 			}
-		
+
 			#footerbox
 			{
 				width: 100%;
-	
+				height: 380px;
+
+				a
+				{
+					line-height: 150%;
+				}
+
 				.left_footer1
 				{
-					height: 150px;
-					width: 150%;
+					height: 180px;
+					width: 100%;
 					padding: 10px;
 					float: left;
-				a
-					{
-						line-height: 15pt
-					}
+
 				}
-				
+
 				.left_footer2
 				{
 					width: 100%;
-					height: 150px;
+					height: 180px;
 					padding: 10px;
 					float: left;
-				a
-					{
-						line-height: 15pt
-					}
+
 				}
-				
+
 				.right_footer
 				{
 					height: 80px;
 					width: 100%;
 					padding: 10px;
 					float: left;
-				a
-					{
-						line-height: 15pt
-					}
+
 				}
 				
 			}
-			
-			
+
 			@include clearfix;
 				.copyright
 				{
 					padding: 0px;
 					text-align: center;
-					
+
 					a
 					{
-						
+
 					}
 				}
 
-			
+
 		}
 	}
-			
+
 
 	/*----------------------------------------------------------------------------------------------------------
 	その他の定義

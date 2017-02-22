@@ -154,15 +154,15 @@ body {
           padding: 0 0 0 20px;
           font-family: FontAwesome; }
         body #hedder_content #hedder_contentbox .header_rightbox .search_box {
-          width: 40%;
+          width: 30%;
           padding: 0 15px 0 0;
           float: right; }
         body #hedder_content #hedder_contentbox .header_rightbox .SEARCH_ENGINE {
           margin-bottom: 5px;
-          background: #fff;
-          border: 2px solid #363636;
-          background: #FFED71;
-          box-sizing: border-box; }
+          background: rgba #fff, 0.6;
+          box-sizing: border-box;
+          opacity: 0.6;
+          border: 2px solid #363636; }
         body #hedder_content #hedder_contentbox .header_rightbox .SEARCH_ENGINE {
           padding: 0; }
         body #hedder_content #hedder_contentbox .header_rightbox input[type="search"] {
@@ -225,6 +225,10 @@ body {
       *zoom: 1; }
       body main #Eye_catch_area #CAROUSEL_SLIDER {
         list-style: none; }
+        body main #Eye_catch_area #CAROUSEL_SLIDER img {
+          -moz-border-radius: 30px;
+          -webkit-border-radius: 30px;
+          border-radius: 30px; }
       body main #Eye_catch_area .owl-controls {
         display: none; }
     body main .content_area {
@@ -238,26 +242,38 @@ body {
         float: left; }
     body main .sp_content {
       display: none; }
+    body main #page_title {
+      width: 100%;
+      height: 50px;
+      background: #ffcc00; }
+      body main #page_title h1 {
+        color: #000000;
+        font-size: 200%;
+        text-align: center;
+        font-weight: bold;
+        padding: 10px 0 0 0; }
     body main #newstitle_area {
       width: 100%;
       height: 30px;
       background: #ffcc00; }
       body main #newstitle_area h2 {
         color: #000000;
-        text-align: center;
+        font-size: 140%;
+        text-align: left;
         font-weight: bold;
-        padding: 7px 0 0 0; }
+        padding: 0 0 0 30px; }
     body main #news_area {
-      height: 130px;
+      height: 100%;
       width: 100%;
-      padding: 10px 0 0 0; }
+      padding: 10px 0 0 0;
+      float: left; }
       body main #news_area .newsimage {
         height: 100px;
         width: 150px;
         padding: 0 0 0 10px;
         float: left; }
       body main #news_area .news {
-        height: 130px;
+        height: 100%;
         width: -moz-calc(100% -  ＋ 150px);
         width: -o-calc(100% -  ＋ 150px);
         width: -webkit-calc(100% -  ＋ 150px);
@@ -265,7 +281,7 @@ body {
         padding: 0 10px 0 0;
         overflow: hidden;
         *zoom: 1; }
-      body main #news_area .newstitle_area {
+      body main #news_area .newstitle {
         height: 20px;
         width: -moz-calc(100% -  ＋ 150px);
         width: -o-calc(100% -  ＋ 150px);
@@ -273,43 +289,48 @@ body {
         width: calc(100% -  ＋ 150px);
         padding: 0 0 0 10px;
         background: #ffcc00; }
+        body main #news_area .newstitle h3, body main #news_area .newstitle a {
+          text-decoration: none; }
       body main #news_area .newstxt {
-        height: 110px;
+        height: 100%;
         width: -moz-calc(100% -  ＋ 150px);
         width: -o-calc(100% -  ＋ 150px);
         width: -webkit-calc(100% -  ＋ 150px);
         width: calc(100% -  ＋ 150px);
-        padding: 0 0 0 10px; }
+        padding: 8px 0 0 10px; }
+        body main #news_area .newstxt a {
+          line-height: 130%; }
   body footer {
     clear: both;
     background-color: #124b95;
     width: 100%;
-    height: 200px;
+    height: 280px;
     overflow: hidden;
     *zoom: 1; }
-    body footer a {
-      color: #ffffff;
-      text-decoration: none; }
     body footer #footerbox {
       width: 100%; }
+      body footer #footerbox a {
+        color: #ffffff;
+        text-decoration: none;
+        line-height: 170%; }
       body footer #footerbox .left_footer1 {
         width: 30%;
-        height: 120px;
+        height: 210px;
         padding: 10px;
         float: left; }
       body footer #footerbox .left_footer2 {
         width: 30%;
-        height: 120px;
+        height: 210px;
         padding: 10px;
         float: left; }
       body footer #footerbox .right_footer {
         width: 30%;
-        height: 120px;
+        height: 210px;
         padding: 10px;
         float: right; }
     body footer .copyright {
       width: 100%;
-      height: 50px;
+      height: 30px;
       padding: 20px;
       text-align: center;
       float: left; }
@@ -371,6 +392,14 @@ Ratina専用定義
       *zoom: 1; }
       body main #Eye_catch_area {
         height: inherit; }
+      body main #CAROUSEL_SLIDER {
+        list-style: none; }
+        body main #CAROUSEL_SLIDER img {
+          -moz-border-radius: 5px;
+          -webkit-border-radius: 5px;
+          border-radius: 5px; }
+      body main .owl-controls {
+        display: none; }
       body main .content_area {
         display: none; }
       body main .sp_content_area {
@@ -379,39 +408,37 @@ Ratina専用定義
           display: block;
           width: 100%; }
           body main .sp_content_area .sp_content img {
+            padding: 2px 0 2px 0;
             width: 100%; }
     body footer {
       background-color: #124b95;
       width: 100%;
-      height: 470px;
+      height: 100%;
       overflow: hidden;
       *zoom: 1; }
       body footer a {
         color: #ffffff;
         text-decoration: none; }
       body footer #footerbox {
-        width: 100%; }
+        width: 100%;
+        height: 380px; }
+        body footer #footerbox a {
+          line-height: 150%; }
         body footer #footerbox .left_footer1 {
-          height: 150px;
-          width: 150%;
+          height: 180px;
+          width: 100%;
           padding: 10px;
           float: left; }
-          body footer #footerbox .left_footer1 a {
-            line-height: 15pt; }
         body footer #footerbox .left_footer2 {
           width: 100%;
-          height: 150px;
+          height: 180px;
           padding: 10px;
           float: left; }
-          body footer #footerbox .left_footer2 a {
-            line-height: 15pt; }
         body footer #footerbox .right_footer {
           height: 80px;
           width: 100%;
           padding: 10px;
           float: left; }
-          body footer #footerbox .right_footer a {
-            line-height: 15pt; }
       body footer .copyright {
         padding: 0px;
         text-align: center; }
